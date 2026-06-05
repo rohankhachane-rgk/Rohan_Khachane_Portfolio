@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import {
   profile,
@@ -66,13 +67,13 @@ function Hero() {
 
           <div className="socials">
             <a href={profile.github} target="_blank" rel="noreferrer">
-              <span className="appIcon githubIcon">GH</span> GitHub
+              <FaGithub /> GitHub
             </a>
             <a href={profile.linkedin} target="_blank" rel="noreferrer">
-              <span className="appIcon linkedinIcon">in</span> LinkedIn
+              <FaLinkedin /> LinkedIn
             </a>
             <a href={`mailto:${profile.email}`}>
-              <span className="appIcon mailIcon">@</span> Email
+              <FaEnvelope /> Email
             </a>
           </div>
         </div>
@@ -321,8 +322,12 @@ function Contact() {
         <div className="glass card contactLinks">
           <a href={`mailto:${profile.email}`}>📧 {profile.email}</a>
           <a href={`tel:${profile.phone}`}>📱 {profile.phone}</a>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer">🔗 LinkedIn</a>
-          <a href={profile.github} target="_blank" rel="noreferrer">💻 GitHub</a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">
+            <FaLinkedin /> LinkedIn
+          </a>
+          <a href={profile.github} target="_blank" rel="noreferrer">
+            <FaGithub /> GitHub
+            </a>
         </div>
 
         <form className="glass contactForm" onSubmit={handleSubmit}>
@@ -330,7 +335,7 @@ function Contact() {
           <input required type="email" placeholder="Your Email" />
           <textarea required rows="5" placeholder="Your Message"></textarea>
           <button className="btn primary" type="submit">Send Message</button>
-          {sent && <p className="success">Message UI submitted. Connect EmailJS later to receive emails.</p>}
+          {sent && <p className="success">✅ Thank you for reaching out! I will get back to you soon.</p>}
         </form>
       </div>
     </section>
@@ -338,7 +343,15 @@ function Contact() {
 }
 
 function App() {
-  const [dark, setDark] = useState(() => localStorage.getItem("theme") !== "light");
+  const [dark, setDark] = useState(() => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    return savedTheme === "dark";
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+});
 
   useEffect(() => {
     document.body.className = dark ? "dark" : "light";

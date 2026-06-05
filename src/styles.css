@@ -673,3 +673,14 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+.socials a,
+.contactLinks a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socials svg,
+.contactLinks svg {
+  font-size: 1.1rem;
+}
