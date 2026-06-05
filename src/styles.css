@@ -1,0 +1,675 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --bg: #f8fafc;
+  --text: #111827;
+  --muted: #4b5563;
+  --card: rgba(255, 255, 255, 0.78);
+  --border: rgba(17, 24, 39, 0.12);
+  --primary: #2563eb;
+  --secondary: #0891b2;
+  --accent: #7c3aed;
+  --soft: #eef2ff;
+  --shadow: 0 14px 45px rgba(15, 23, 42, 0.12);
+  --gradient: linear-gradient(135deg, #2563eb, #0891b2, #7c3aed);
+}
+
+body.dark {
+  --bg: #080d1a;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --card: rgba(15, 23, 42, 0.78);
+  --border: rgba(255, 255, 255, 0.14);
+  --primary: #60a5fa;
+  --secondary: #22d3ee;
+  --accent: #a78bfa;
+  --soft: #111827;
+  --shadow: 0 16px 50px rgba(0, 0, 0, 0.32);
+  --gradient: linear-gradient(135deg, #60a5fa, #22d3ee, #a78bfa);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.18), transparent 24%),
+    radial-gradient(circle at 90% 5%, rgba(8, 145, 178, 0.15), transparent 25%),
+    var(--bg);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+.section {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0;
+}
+
+.compactSection {
+  padding: 48px 0;
+}
+
+.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+}
+
+.navbar {
+  width: min(1080px, calc(100% - 32px));
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  position: sticky;
+  top: 12px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.navLinks {
+  display: flex;
+  gap: 18px;
+  color: var(--muted);
+  text-transform: capitalize;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.navLinks a:hover {
+  color: var(--primary);
+}
+
+.navActions {
+  display: flex;
+  gap: 8px;
+}
+
+.themeBtn {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.hero {
+  min-height: auto;
+  padding-top: 52px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 28px;
+  align-items: center;
+}
+
+.heroContent {
+  min-width: 0;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 900;
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.06em;
+}
+
+h1 span {
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 2.6vw, 2.15rem);
+  line-height: 1.1;
+  margin: 10px 0 14px;
+  letter-spacing: -0.03em;
+}
+
+.hero h2 {
+  color: var(--muted);
+}
+
+.heroText,
+.card p,
+.projectCard p,
+.timelineItem p,
+.expItem p,
+.expItem small {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.heroText {
+  max-width: 760px;
+  font-size: 0.96rem;
+}
+
+.roleList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.roleList span {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.11);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.heroActions,
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 17px;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background: var(--gradient);
+  color: white;
+}
+
+.secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 850;
+  color: var(--muted);
+}
+
+.socials a:hover {
+  color: var(--primary);
+}
+
+.appIcon {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  display: inline-grid;
+  place-items: center;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.githubIcon {
+  background: #111827;
+}
+
+.linkedinIcon {
+  background: #0a66c2;
+  font-size: 0.9rem;
+}
+
+.mailIcon {
+  background: #ea4335;
+}
+
+.profileCard {
+  padding: 22px;
+  text-align: center;
+}
+
+.avatarRing {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  padding: 5px;
+  background: var(--gradient);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--bg);
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+
+.profileCard h3 {
+  margin-bottom: 6px;
+}
+
+.profileCard p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.miniTags,
+.techList,
+.certGrid,
+.skillsInline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.miniTags span,
+.techList span,
+.certGrid span,
+.skillsInline span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 11px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.stat {
+  padding: 18px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 1.65rem;
+  margin: 0;
+  color: var(--primary);
+}
+
+.stat p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: 0.88rem;
+}
+
+.sectionHead {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.sectionHead p {
+  color: var(--accent);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 8px;
+}
+
+.sectionHead h2 {
+  margin-top: 0;
+}
+
+.twoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.card,
+.timelineItem,
+.projectControls,
+.contactForm {
+  padding: 24px;
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timelineItem span,
+.expItem span,
+.projectCard small {
+  color: var(--primary);
+  font-weight: 900;
+  font-size: 0.86rem;
+}
+
+.skillCategoryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skillCategoryCard {
+  padding: 22px;
+}
+
+.skillCategoryCard h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.skillsInline span {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.13), rgba(8, 145, 178, 0.13));
+  color: var(--text);
+}
+
+.projectControls {
+  margin-bottom: 22px;
+}
+
+.projectControls input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--soft);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 13px 15px;
+  outline: 0;
+  font-size: 0.98rem;
+  margin-bottom: 14px;
+}
+
+.categoryRow {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.categoryRow button {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.categoryRow button.active {
+  background: var(--gradient);
+  color: white;
+  border-color: transparent;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.projectCard {
+  padding: 21px;
+  cursor: pointer;
+  transition: 0.22s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectCard h3 {
+  font-size: 1.05rem;
+}
+
+.textBtn {
+  margin-top: 14px;
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.expItem {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.expItem:last-child {
+  border-bottom: 0;
+}
+
+.contactLinks {
+  display: grid;
+  gap: 14px;
+}
+
+.contactLinks a {
+  color: var(--muted);
+  font-weight: 850;
+}
+
+.contactForm {
+  display: grid;
+  gap: 13px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--soft);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 13px 15px;
+  outline: 0;
+}
+
+.success {
+  color: #10b981;
+  font-weight: 900;
+}
+
+.modalBg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.58);
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+
+.modal {
+  width: min(680px, 100%);
+  padding: 28px;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  background: var(--gradient);
+  color: white;
+  border-radius: 10px;
+  padding: 7px 11px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px 16px;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .heroGrid,
+  .twoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileCard {
+    max-width: 330px;
+  }
+
+  .projectGrid,
+  .skillCategoryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    padding: 18px;
+    border-radius: 20px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(16px);
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .menuBtn {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 620px) {
+  .section,
+  .compactSection {
+    padding: 38px 0;
+  }
+
+  .projectGrid,
+  .statsGrid,
+  .skillCategoryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .profileCard {
+    max-width: 100%;
+  }
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.infoCard {
+  padding: 24px;
+  transition: 0.22s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-5px);
+}
+
+.infoCard small {
+  color: var(--primary);
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.infoCard h3 {
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+.infoCard p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.experienceHead {
+  margin-top: 55px;
+}
+
+@media (max-width: 900px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
