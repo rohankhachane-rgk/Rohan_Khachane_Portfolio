@@ -1,0 +1,3 @@
+service_m6182zm
+template_rzgfx8o
+Public Key: wg6nEb4S90E-yTRyb

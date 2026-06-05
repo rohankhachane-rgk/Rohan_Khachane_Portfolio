@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import {
@@ -305,11 +306,25 @@ function Experience() {
 function Contact() {
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    setSent(true);
-    event.currentTarget.reset();
-  }
+function handleSubmit(event) {
+  event.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_m6182zm",
+      "template_rzgfx8o",
+      event.currentTarget,
+      "eHc63Etxv5gLPwvzp"
+    )
+    .then(() => {
+      setSent(true);
+      event.target.reset();
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Failed to send message.");
+    });
+}
 
   return (
     <section id="contact" className="section compactSection">
@@ -330,13 +345,37 @@ function Contact() {
             </a>
         </div>
 
-        <form className="glass contactForm" onSubmit={handleSubmit}>
-          <input required placeholder="Your Name" />
-          <input required type="email" placeholder="Your Email" />
-          <textarea required rows="5" placeholder="Your Message"></textarea>
-          <button className="btn primary" type="submit">Send Message</button>
-          {sent && <p className="success">✅ Thank you for reaching out! I will get back to you soon.</p>}
-        </form>
+       <form className="glass contactForm" onSubmit={handleSubmit}>
+  <input
+    name="name"
+    required
+    placeholder="Your Name"
+  />
+
+  <input
+    name="email"
+    type="email"
+    required
+    placeholder="Your Email"
+  />
+
+  <textarea
+    name="message"
+    rows="5"
+    required
+    placeholder="Your Message"
+  ></textarea>
+
+  <button className="btn primary" type="submit">
+    Send Message
+  </button>
+
+  {sent && (
+    <p className="success">
+      ✅ Thank you for reaching out! I will get back to you soon.
+    </p>
+  )}
+</form>
       </div>
     </section>
   );
