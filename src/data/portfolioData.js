@@ -25,7 +25,7 @@ export const skillGroups = [
   },
   {
     category: "Web Technologies",
-    items: ["HTML", "CSS", "PHP", "SQL", "Node.js"]
+    items: ["HTML", "CSS", "PHP", "SQL", "Node.js", "React.js"]
   },
   {
     category: "Mobile Development",
@@ -148,6 +148,13 @@ export const projects = [
     tech: ["Power BI", "Data Analysis", "Visualization"],
     description: "Power BI dashboard to analyze Amazon food sales data, consumer behavior, product trends, and growth opportunities.",
     impact: "Converts raw sales data into business insights."
+  },
+  {
+  title: "Rohan Tools Hub",
+  category: "Frontend Development",
+  tech: ["React", "JavaScript", "HTML", "CSS", "Responsive Design"],
+  description: "A modern web platform featuring multiple utility tools, clean navigation, responsive design, and an enhanced user experience. Built to demonstrate frontend development skills, UI design, and component-based architecture.",
+  impact: "Provides users with a convenient all-in-one toolkit while showcasing practical web development expertise."
   },
   {
     title: "VPM Portfolio Android App",
