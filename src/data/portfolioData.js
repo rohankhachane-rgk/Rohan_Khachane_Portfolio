@@ -8,7 +8,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/rohan-khachane-36a2b8240",
   roles: ["Software Developer", "Data Analyst", "Machine Learning Enthusiast","Python Developer","Java Developer","Power BI Developer", "Azure cloud Learner"],
   summary:
-    "Computer Engineering graduate with expertise in software development, data analytics, machine learning, and business intelligence. Skilled in Java, Python, SQL, JavaScript, Power BI, MongoDB, Firebase, and Oracle Database."
+    "Computer Engineering Graduate with expertise in software development, data analytics, machine learning, and business intelligence. Skilled in Java, Python, SQL, JavaScript, Power BI, MongoDB, Firebase, and Oracle Database."
 };
 
 export const stats = [
@@ -170,6 +170,20 @@ export const projects = [
     description: "College information app with admission details, fees, faculty, scholarships, study material, contact module, and APIs.",
     impact: "Centralized information system for students."
   },
+  {
+  title: "Smart Warehouse Management System",
+  category: "Backend API",
+  tech: ["Python", "Django", "Pandas", "SQLite", "Time Series Forecasting"],
+  description: "Developed a warehouse and inventory management system to manage stock tracking, order operations, demand forecasting, product placement, and reorder alerts. Built backend APIs to support inventory planning and improve warehouse efficiency.",
+  impact: "Implemented smart inventory insights, demand prediction, and automated reorder alerts to help reduce stock shortages and support better warehouse decision-making."
+},
+{
+  title: "AI Movie Recommendation System",
+  category: "Machine Learning",
+  tech: ["Python", "Django", "Pandas", "NumPy", "Scikit-learn"],
+  description: "Developed a content-based movie recommendation system that suggests movies based on user preferences and movie similarity. Used machine learning techniques and cosine similarity to generate personalized movie recommendations.",
+  impact: "Built an intelligent recommendation engine to improve movie discovery by analyzing movie features and suggesting similar content based on user-selected movies."
+},
   {
     title: "Customer Segmentation Analysis",
     category: "Data Analytics",

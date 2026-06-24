@@ -14,7 +14,7 @@ import {
 
 function Navbar({ dark, setDark }) {
   const [open, setOpen] = useState(false);
-  const links = ["home", "about", "skills", "projects", "experience", "contact"];
+  const links = ["home", "about", "skills", "projects", "certifications", "experience", "contact"];
 
   return (
     <nav className="navbar glass">
@@ -121,12 +121,18 @@ function About() {
       <div className="twoGrid">
         <div className="glass card">
           <h3>Career Objective</h3>
-          <p>
-            I want to build impactful software, dashboards, machine learning solutions,
-            and web-based platforms that solve real business and user problems.
-            I am looking for entry-level roles in software development, data analytics,
-            machine learning, business analytics, or technology associate positions.
-          </p>
+         <p>
+  Computer Engineering graduate with a strong foundation in software development,
+  data analytics, machine learning, and web technologies. Experienced in building
+  software applications, interactive dashboards, data-driven solutions, and
+  scalable web platforms through academic projects and internships. Proficient in
+  Python, Java, SQL, Power BI, and web development technologies, with a keen
+  interest in solving real-world business problems using technology and data.
+  Seeking entry-level opportunities in Software Development, Data Analytics,
+  Machine Learning, Business Analytics, or Technology Associate roles to
+  contribute technical expertise, analytical thinking, and continuous learning
+  to organizational success.
+</p>
         </div>
 
         <div className="timeline">
@@ -241,9 +247,10 @@ function Projects() {
   );
 }
 
-function Experience() {
+
+function Certifications() {
   return (
-    <section id="experience" className="section compactSection">
+    <section id="certifications" className="section compactSection">
       <div className="sectionHead">
         <p>Certifications</p>
         <h2>Professional Certifications</h2>
@@ -257,8 +264,16 @@ function Experience() {
           </article>
         ))}
       </div>
+    </section>
+  );
+}
 
-      <div className="sectionHead experienceHead">
+
+function Experience() {
+  return (
+    <section id="experience" className="section compactSection">
+
+      <div className="sectionHead">
         <p>Training</p>
         <h2>Training Programs</h2>
       </div>
@@ -299,9 +314,11 @@ function Experience() {
           </article>
         ))}
       </div>
+
     </section>
   );
 }
+
 
 function Contact() {
   const [sent, setSent] = useState(false);
@@ -405,6 +422,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Certifications />
         <Experience />
         <Contact />
       </main>
