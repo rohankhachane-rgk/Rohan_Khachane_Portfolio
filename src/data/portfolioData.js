@@ -157,6 +157,13 @@ export const projects = [
   impact: "Provides users with a convenient all-in-one toolkit while showcasing practical web development expertise."
   },
   {
+  title: "Sales Performance Analytics Dashboard Power BI",
+  category: "Power BI",
+  tech: ["Power BI", "DAX", "Power Query", "Excel", "Data Modeling"],
+  description: "Developed an interactive Power BI dashboard to analyze sales performance, customer behavior, product trends, revenue, profit, and return rates. Performed data cleaning, transformation, modeling, and KPI creation to generate actionable business insights.",
+  impact: "Analyzed $24.9M revenue, $10.46M profit, 25K+ orders, and 17K+ customers to identify sales trends, top-performing products, and business growth opportunities."
+  },
+  {
     title: "VPM Portfolio Android App",
     category: "Android",
     tech: ["Android Studio", "Firebase", "Google Maps API", "Google Drive API"],
