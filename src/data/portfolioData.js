@@ -250,21 +250,21 @@ export const projects = [
 ];
 
 export const certifications = [
-  "Artificial Intelligence Primer Certification - Infosys Springboard",
-  "Computer Vision 101 - Infosys Springboard",
-  "Data Science & Analytics - HP Life",
-  "Generative Models for Developers - Infosys Springboard",
-  "Introduction to Artificial Intelligence - Infosys Springboard",
-  "Introduction to Data Science - Infosys Springboard",
-  "Introduction to Deep Learning - Infosys Springboard",
-  "Introduction to Natural Language Processing - Infosys Springboard",
-  "Principles of Generative AI - Infosys Springboard",
-  "Building AI Apps with MongoDB on AWS - MongoDB",
-  "PHP and SQL - Spoken Tutorial IIT Bombay",
-  "Android App Development - Spoken Tutorial IIT Bombay",
-  "Microsoft AI Classroom Series",
-  "Oracle Certified Foundations Associate",
-  "Introduction to Robotics and AI - PEL Robotics",
-  "Python Course - Udemy",
-  "Google Cloud Data Analytics - Google Cloud Skill Boost"
+  "🤖 Artificial Intelligence Primer Certification - Infosys Springboard",
+  "👁️ Computer Vision 101 - Infosys Springboard",
+  "📊 Data Science & Analytics - HP LIFE",
+  "🧠 Generative Models for Developers - Infosys Springboard",
+  "🤖 Introduction to Artificial Intelligence - Infosys Springboard",
+  "📈 Introduction to Data Science - Infosys Springboard",
+  "🧠 Introduction to Deep Learning - Infosys Springboard",
+  "💬 Introduction to Natural Language Processing - Infosys Springboard",
+  "✨ Principles of Generative AI - Infosys Springboard",
+  "🍃 Building AI Apps with MongoDB on AWS - MongoDB",
+  "🐘 PHP and SQL - Spoken Tutorial, IIT Bombay",
+  "📱 Android App Development - Spoken Tutorial, IIT Bombay",
+  "🤖 Microsoft AI Classroom Series - Microsoft",
+  "🏆 Oracle Certified Foundations Associate - Oracle",
+  "🤖 Introduction to Robotics and AI - PEL Robotics",
+  "🐍 Python Course - Udemy",
+  "☁️ Google Cloud Data Analytics - Google Cloud Skills Boost"
 ];
