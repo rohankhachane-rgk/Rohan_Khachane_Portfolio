@@ -3,8 +3,6 @@
 Included changes:
 - Skills are category-wise
 - All 17 certifications added
-- GitHub stats section removed
-- CGPA/percentage removed
 - Stats show 5+ Technologies instead
 - Light/dark mode retained
 - Project search/filter retained
