@@ -685,28 +685,43 @@ h2 {
   font-size: 1.1rem;
 }
 
-.projectActions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
+.projectActions{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:18px;
 }
 
-.githubBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  background: #24292e;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.githubBtn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 16px;
+    background:#24292f;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
 }
 
-.githubBtn:hover {
-  background: #000;
-  transform: translateY(-2px);
+.githubBtn:hover{
+    background:#000;
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.textBtn{
+    background:none;
+    border:none;
+    color:#2563eb;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.textBtn:hover{
+    color:#1d4ed8;
+    transform:translateX(6px);
 }

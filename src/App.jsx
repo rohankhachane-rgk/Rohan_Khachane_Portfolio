@@ -227,6 +227,19 @@ function Projects() {
 </div>
 
 <div className="projectActions">
+  {project.github && (
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="githubBtn"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <FaGithub />
+      <span>View on GitHub</span>
+    </a>
+  )}
+
   <button
     className="textBtn"
     onClick={(e) => {
@@ -236,19 +249,6 @@ function Projects() {
   >
     View Details →
   </button>
-
- {project.github && (
-  <a
-    href={project.github}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="githubBtn"
-    onClick={(e) => e.stopPropagation()}
-  >
-    <FaGithub />
-    <span>View on GitHub</span>
-  </a>
-)}
 </div>
           </article>
         ))}
