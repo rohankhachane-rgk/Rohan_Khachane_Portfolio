@@ -91,13 +91,13 @@ export const internships = [
   {
     role: "Data Analytics Intern",
     company: "Oasis Infobyte",
-    duration: "Feb 2025 - Mar 2025",
+    duration: "Mar 2025 - Apr 2025",
     skills: ["Python", "Jupyter Notebook", "Data Analysis"]
   },
   {
     role: "Web Development Intern",
     company: "Oasis Infobyte",
-    duration: "May 2025 - Jun 2025",
+    duration: "Apr 2025 - May 2025",
     skills: ["Website Development", "Designing"]
   },
   {
@@ -114,7 +114,7 @@ export const internships = [
   },
   {
     role: "UI/UX Design Intern",
-    company: "Codtect IT Solutions Pvt. Ltd.",
+    company: "Codtech IT Solutions Pvt. Ltd.",
     duration: "Dec 2025 - Jan 2026",
     skills: ["UI/UX Design"]
   }
