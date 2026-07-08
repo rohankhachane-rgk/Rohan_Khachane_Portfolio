@@ -219,10 +219,37 @@ function Projects() {
             <small>{project.category}</small>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
+
             <div className="techList">
-              {project.tech.slice(0, 4).map((tech) => <span key={tech}>{tech}</span>)}
-            </div>
-            <button className="textBtn">View Details →</button>
+  {project.tech.slice(0, 4).map((tech) => (
+    <span key={tech}>{tech}</span>
+  ))}
+</div>
+
+<div className="projectActions">
+  <button
+    className="textBtn"
+    onClick={(e) => {
+      e.stopPropagation();
+      setSelected(project);
+    }}
+  >
+    View Details →
+  </button>
+
+ {project.github && (
+  <a
+    href={project.github}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="githubBtn"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <FaGithub />
+    <span>View on GitHub</span>
+  </a>
+)}
+</div>
           </article>
         ))}
       </div>
@@ -231,15 +258,31 @@ function Projects() {
         <div className="modalBg" onClick={() => setSelected(null)}>
           <div className="modal glass" onClick={(event) => event.stopPropagation()}>
             <button className="closeBtn" onClick={() => setSelected(null)}>✕</button>
+
             <p className="eyebrow">{selected.category}</p>
             <h2>{selected.title}</h2>
             <p>{selected.description}</p>
+
             <h4>Impact</h4>
             <p>{selected.impact}</p>
+
             <h4>Technology Stack</h4>
             <div className="techList">
-              {selected.tech.map((tech) => <span key={tech}>{tech}</span>)}
+              {selected.tech.map((tech) => (
+                <span key={tech}>{tech}</span>
+              ))}
             </div>
+
+            {selected.github && (
+              <a
+                href={selected.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="githubBtn"
+              >
+                <FaGithub /> View on GitHub
+              </a>
+            )}
           </div>
         </div>
       )}

@@ -684,3 +684,29 @@ h2 {
 .contactLinks svg {
   font-size: 1.1rem;
 }
+
+.projectActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.githubBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #24292e;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.githubBtn:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
