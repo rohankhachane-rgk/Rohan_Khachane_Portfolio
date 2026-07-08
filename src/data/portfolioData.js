@@ -136,6 +136,13 @@ export const projects = [
     impact: "Supports early risk identification through data-driven prediction."
   },
   {
+  title: "AI Assistant for Restaurant Management System",
+  category: "Artificial Intelligence",
+  tech: ["Python", "Machine Learning", "Artificial Intelligence", "Data Analytics", "Jupyter Notebook"],
+  description: "Developed an AI-powered restaurant management assistant to streamline customer interactions, order management, reservations, and daily restaurant operations through intelligent automation.",
+  impact: "Built a smart assistant that improves operational efficiency, enhances customer experience, automates repetitive tasks, and provides data-driven insights to support restaurant management."
+  },
+  {
     title: "Online Therapy Platform",
     category: "Web",
     tech: ["Node.js", "JavaScript", "MongoDB"],
@@ -171,6 +178,13 @@ export const projects = [
     impact: "Centralized information system for students."
   },
   {
+  title: "Smart Employee Attendance Chatbot",
+  category: "Full Stack Web Application",
+  tech: ["React", "Vite", "Node.js", "Express.js", "MySQL", "JWT", "Groq API"],
+  description: "Developed an AI-powered employee attendance and leave management system that helps employees track attendance, view leave balances, submit leave requests, and get instant HR-related answers through an AI chatbot.",
+  impact: "Built a secure and user-friendly HR management platform with role-based access control, real-time dashboard insights, light/dark mode support, and natural language chatbot assistance to reduce manual attendance and leave management effort."
+  },
+  {
   title: "Smart Warehouse Management System",
   category: "Backend API",
   tech: ["Python", "Django", "Pandas", "SQLite", "Time Series Forecasting"],
@@ -184,13 +198,6 @@ export const projects = [
   description: "Developed a content-based movie recommendation system that suggests movies based on user preferences and movie similarity. Used machine learning techniques and cosine similarity to generate personalized movie recommendations.",
   impact: "Built an intelligent recommendation engine to improve movie discovery by analyzing movie features and suggesting similar content based on user-selected movies."
 },
-  {
-    title: "Customer Segmentation Analysis",
-    category: "Data Analytics",
-    tech: ["Python", "K-Means", "Visualization"],
-    description: "Segmented e-commerce customers using behavior and purchase patterns for targeted marketing strategies.",
-    impact: "Helps businesses personalize marketing."
-  },
   {
     title: "Predicting House Prices With Linear Regression",
     category: "Machine Learning",
@@ -218,6 +225,20 @@ export const projects = [
     tech: ["Python", "Data Cleaning", "Visualization", "Sentiment Analysis"],
     description: "Analysis of Google Play Store data to understand app market dynamics, ratings, categories, and user sentiments.",
     impact: "Provides insights into Android app market trends."
+  },
+  {
+  title: "Exploratory Data Analysis (EDA) Retail Sales Data Analysis",
+  category: "Data Analytics",
+  tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+  description: "Performed exploratory data analysis (EDA) on retail sales data to identify sales trends, customer purchasing behavior, and product performance through statistical analysis and data visualization.",
+  impact: "Generated actionable business insights using descriptive statistics, time-series analysis, and interactive visualizations, helping support data-driven decisions for sales optimization and customer engagement."
+},
+  {
+    title: "Customer Segmentation Analysis",
+    category: "Data Analytics",
+    tech: ["Python", "K-Means", "Visualization"],
+    description: "Segmented e-commerce customers using behavior and purchase patterns for targeted marketing strategies.",
+    impact: "Helps businesses personalize marketing."
   },
   {
     title: "Student Grade Tracker",
